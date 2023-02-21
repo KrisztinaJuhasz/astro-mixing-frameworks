@@ -4,6 +4,11 @@ import VueCounter from '../components/vue/Counter.vue'
 import SvelteCounter from '../components/svelte/Counter.svelte'
 import SolidCounter from '../components/solid/Counter'
 import Description from '../components/astro/Description.astro'
+
+import ReactCounterNoState from '../components/react/Counter_noSharedState'
+import VueCounterNoState from '../components/vue/Counter_noSharedState.vue'
+import SvelteCounterNoState from '../components/svelte/Counter_noSharedState.svelte'
+import SolidCounterNoState from '../components/solid/Counter_noSharedState'
 ---
 
 <html lang="en">
@@ -20,5 +25,12 @@ import Description from '../components/astro/Description.astro'
 		<VueCounter client:load />
 		<SvelteCounter client:load />
 		<SolidCounter client:load />
+		<hr>
+		<h3>Not using global state</h3>
+		<p>Components have independent count values.</p>
+		<ReactCounterNoState client:load />
+		<VueCounterNoState client:load />
+		<SvelteCounterNoState client:load />
+		<SolidCounterNoState client:load />
 	</body>
 </html>
